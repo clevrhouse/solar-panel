@@ -31,6 +31,7 @@ The panel shows what a Victron GX display shows (power flow, battery, grid and t
 - [Connection modes](#connection-modes)
 - [Getting started](#getting-started)
 - [Beyond solar](#beyond-solar): Doorbird, irrigation, rollers and shutters, bedroom panel
+- [Support the project](#support-the-project)
 - [Project status](#project-status)
 
 ## Screens
@@ -189,6 +190,12 @@ A 4-inch panel for bedrooms. The home screen shows the clock, the weather and a 
     <td align="center"><img src="docs/images/bedroom-forecast.png" width="200" alt="Weather forecast"><br><sub>Forecast</sub></td>
   </tr>
 </table>
+
+## Support the project
+
+If the display is useful to you, you can support its development:
+
+<a href="https://buymeacoffee.com/clevrhouse"><img src="https://img.shields.io/badge/Buy%20me%20a%20coffee-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=black" alt="Buy me a coffee"></a>
 
 ## Project status
 
