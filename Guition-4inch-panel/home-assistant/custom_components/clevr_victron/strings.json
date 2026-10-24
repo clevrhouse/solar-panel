@@ -1,0 +1,66 @@
+{
+  "title": "Clevr Victron Panel",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to GX through Home Assistant MQTT",
+        "description": "Use the MQTT connection already configured in Home Assistant. This integration listens to the GX data feed and does not send keepalive or read requests. Follow the clevr.house MQTT setup article before scanning.",
+        "data": {
+          "prefix": "MQTT bridge prefix (empty for direct GX)",
+          "portal": "GX portal ID"
+        }
+      },
+      "review": {
+        "title": "Review detected equipment",
+        "description": "Detected: {inventory}. Confirm every installed solar device and each phase mask. Scan while inverters are online.",
+        "data": {
+          "grid": "Grid energy meter",
+          "battery": "Battery energy meter",
+          "solar_devices": "Installed solar devices",
+          "Grid": "Grid phases",
+          "ConsumptionOnInput": "AC input load phases",
+          "ConsumptionOnOutput": "AC output load phases",
+          "vebus": "Inverter/charger (VE.Bus) shown on the panel",
+          "battery_capacity_kwh": "Usable battery capacity (kWh)"
+        }
+      },
+      "confirm": {
+        "title": "Create reviewed sensors",
+        "description": "{warnings}\n\nNative counters and estimated energy are separate source types. Continue only after reviewing the equipment and phase selections."
+      }
+    },
+    "error": {
+      "cannot_discover": "A complete GX inventory was not received. Check the MQTT setup described in the clevr.house article, the prefix and the portal ID."
+    },
+    "abort": {
+      "already_configured": "This GX is already configured. Enable or reconfigure the existing Clevr GX entry (it may be disabled) instead of adding it again.",
+      "single_gx": "The Clevr panels read one GX through fixed entity IDs (sensor.clevr_victron_*). A GX entry already exists (it may be disabled). Reconfigure or remove it instead of adding another."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Panel settings",
+        "description": "Battery capacity drives the 'full at' estimate. Forecast sensors are found automatically from the Victron Remote Monitoring integration; choose them only to override.",
+        "data": {
+          "battery_capacity_kwh": "Usable battery capacity (kWh)",
+          "forecast_today": "Forecast: today",
+          "forecast_remaining": "Forecast: remaining today",
+          "forecast_this_hour": "Forecast: this hour",
+          "forecast_next_hour": "Forecast: next hour",
+          "forecast_tomorrow": "Forecast: tomorrow"
+        }
+      }
+    }
+  },
+  "issues": {
+    "feed_name_conflict": {
+      "title": "Clevr Victron panel feed names are taken",
+      "description": "The panel firmware reads sensor.clevr_victron_live_snapshot, _energy_snapshot and _history_snapshot. These IDs are already used by something else: {ids}. Rename or remove those entities, then reload the Clevr Victron entry."
+    },
+    "second_gx": {
+      "title": "Only one GX can feed the panels",
+      "description": "The GX entry \"{portal}\" cannot start: the panel firmware reads one fixed feed, owned by the first Clevr Victron entry. Remove this entry."
+    }
+  }
+}
