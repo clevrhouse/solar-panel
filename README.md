@@ -20,7 +20,7 @@
 ---
 
 <p align="center">
-  <img src="docs/images/clevr-gx-display-overview.jpg" width="100%" alt="Clevr Victron GX display replacement: the panel next to two MultiPlus-II inverters, a comparison with the standard Victron display, what it can show, and the compact rear-USB mount">
+  <img src="docs/images/clevr-gx-display-overview2.jpg" width="100%" alt="Clevr Victron GX display replacement: the panel next to two MultiPlus-II inverters, a comparison with the standard Victron display, what it can show, and the compact rear-USB mount">
 </p>
 
 The panel shows what a Victron GX display shows (power flow, battery, grid and the MultiPlus state) and adds things the GX cannot: per-phase detail, daily energy totals, hourly and 7-day history, and a solar forecast. It also lets you change the ESS minimum state of charge from the screen.
