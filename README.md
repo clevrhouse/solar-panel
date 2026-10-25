@@ -27,7 +27,7 @@ The panel shows what a Victron GX display shows (power flow, battery, grid and t
 ## Contents
 
 - [Screens](#screens)
-- [Hardware](#hardware)
+- [Hardware](#hardware), including a [3D-printed desk stand](#3d-printed-desk-stand-4-inch)
 - [Connection modes](#connection-modes)
 - [Getting started](#getting-started)
 - [Beyond solar](#beyond-solar): Doorbird, irrigation, rollers and shutters, bedroom panel
@@ -97,13 +97,25 @@ The 5-inch panel uses an 800×480 landscape layout with a side rail. The Now scr
 
 | | 4-inch | 5-inch |
 |---|---|---|
-| Panel | Guition ESP32-S3, 480 × 480 | Guition JC8048W550, 800 × 480 |
+| Panel | Guition ESP32-4848S040, 480 × 480 | Guition JC8048W550, 800 × 480 |
 | Layout | Square, bottom navigation bar | Landscape, side rail |
 | Firmware | 4-inch build | 5-inch build |
 
 Each size needs its own firmware. Renaming the 4-inch YAML does not convert it to 5-inch.
 
 You also need a Victron GX device: a Cerbo GX, Ekrano GX or another Venus OS device.
+
+### 3D-printed desk stand (4-inch)
+
+<img src="4inch-panel-support/guition-4848s040-holder.jpg" width="420" align="right" alt="Guition 4848S040 desk stand with rear USB-C power input">
+
+A printable stand for the 4-inch panel. Power comes in through a USB-C socket on the back of the stand, so no cable sticks out of the side of the display.
+
+It is made of two printed parts plus a USB-C breakout board and a 4-pin MX1.25 cable. Only +5V and GND are connected.
+
+STL files, a parts list and assembly steps are in [`4inch-panel-support/`](4inch-panel-support/).
+
+<br clear="right">
 
 ## Connection modes
 
